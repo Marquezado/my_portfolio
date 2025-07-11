@@ -1,0 +1,115 @@
+---
+import Section from "../Section.astro";
+import { projects } from "@cv";
+---
+
+<Section title="Projects">
+  <div class="container">
+    <ul class="card-grid">
+      {
+        projects.map(({ name, url, description, languages }) => (
+          <li>
+            <article class="card">
+              <header>
+                <a href={url || "#"} title={`Ver el proyecto ${name}`}>
+                  <h3>{name}</h3>
+                </a>
+                <p>{description}</p>
+              </header>
+              <footer>
+                <ul class="language-list">
+                  {languages.map(({ name }) => (
+                    <li>
+                      <span>{name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </footer>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #222;
+  }
+
+  .card p {
+    margin: 0 0 1rem;
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .language-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .language-list li {
+    background: #f3f3f3;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    color: #333;
+    transition:
+      0.3s ease,
+      color 0.3s ease;
+  }
+
+  .language-list li:hover {
+    background: #000;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover h3 {
+    text-decoration: underline;
+  }
+</style>

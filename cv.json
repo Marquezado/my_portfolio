@@ -1,0 +1,152 @@
+{
+  "basics": {
+    "name": "David D. Marquezado",
+    "label": "Desarrollador de Software",
+    "image": "",
+    "email": "marquezadod4vid@gmail.com",
+    "phone": "1412123123",
+    "url": "https://johndoe.com",
+    "summary": "Estudiante de Desarrollo de software del Instituto IDAT, en busca de practicas Pre-Profesionales, con un gran interes por aplicar lo aprendido en un entorno profesional. Destaco por adaptarse a nuevos retos y mantener una actitud de aprendizaje constante. ",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Lima",
+      "countryCode": "PER",
+      "region": "Lima"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "MarquezadoD",
+        "url": "https://github.com/Marquezado"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "David Marquezado",
+        "url": "https://www.linkedin.com/in/david-marquezado-772427361"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "IDAT",
+      "url": "https://www.idat.edu.pe/",
+      "area": "Computación e Informatica",
+      "studyType": "Grado Bachiller técnico en Desarrollo de Sistemas de Información",
+      "startDate": "2024-01-15",
+      "endDate": null,
+      "score": "4.0",
+      "courses": [
+        ""
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Junior"
+    },
+    {
+      "name": "CSS",
+      "level": "Junior"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Junior"
+    },
+    {
+      "name": "React",
+      "level": "Junior"
+    },
+    {
+      "name": "Node.js",
+      "level": "Junior"
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Junior"
+    },
+    {
+      "name": "Python",
+      "level": "Junior"
+    },
+    {
+      "name": "Java",
+      "level": "Junior"
+    },
+    {
+      "name": "SQL",
+      "level": "Junior"
+    },
+    {
+      "name": "MySQL",
+      "level": "Beginner"
+    },
+    {
+      "name": "Oracle",
+      "level": "Beginner"
+    },
+    {
+      "name": "Git",
+      "level": "Beginner"
+    },
+    {
+      "name": "GitHub",
+      "level": "Beginner"
+    },
+    {
+      "name": "Visual Studio Code",
+      "level": "Beginner"
+    },
+    {
+      "name": "Postman",
+      "level": "Beginner"
+    },
+    {
+      "name": "SCRUM",
+      "level": "Beginner"
+    },
+    {
+      "name": "Design Thinking",
+      "level": "Beginner"
+    },
+    {
+      "name": "Word",
+      "level": "Beginner"
+    },
+    {
+      "name": "PowerPoint",
+      "level": "Beginner"
+    },
+    {
+      "name": "Excel",
+      "level": "Beginner"
+    },
+    {
+      "name": "Teams",
+      "level": "Beginner"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "B2"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Autentificador de Usuarios",
+      "url": "https://github.com/Marquezado/node-js-user-auth",
+      "isActive": true,
+      "description": "Un Autentificador de Usuario con JWT y cookies para sesión",
+      "languages": [
+        {
+          "name": "Express"
+        },
+        {
+          "name": "Node.js"
+        }
+      ]
+    }
+  ]
+}
