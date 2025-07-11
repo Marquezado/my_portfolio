@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://Marquezado.github.io'
+    site: 'https://Marquezado.github.io',
+    base: 'my_portfolio'
 });
