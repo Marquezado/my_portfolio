@@ -147,6 +147,31 @@
           "name": "Node.js"
         }
       ]
+    },
+    {
+      "name": "API Rest Countries",
+      "url": "https://github.com/Marquezado/react-rest-countries-app",
+      "isActive": true,
+      "description": "Una API que permite visualizar paises del mundo",
+      "languages": [
+        {
+          "name": "React"
+        }
+      ]
+    },
+    {
+      "name": "Agenda de Contactos",
+      "url": "https://github.com/Marquezado/spring-boot-agenda-contactos",
+      "isActive": true,
+      "description": "Aplicacion CRUD de Agenda Personal",
+      "languages": [
+        {
+          "name": "Java"
+        },
+        {
+          "name": "Spring Boot 3"
+        }
+      ]
     }
   ]
 }
