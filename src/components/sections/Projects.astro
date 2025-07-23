@@ -9,23 +9,29 @@ import { projects } from "@cv";
       {
         projects.map(({ name, url, description, languages }) => (
           <li>
-            <article class="card">
-              <header>
-                <a href={url || "#"} title={`Ver el proyecto ${name}`}>
+            <a
+              href={url || "#"}
+              title={`Ver el proyecto ${name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card-link"
+            >
+              <article class="card">
+                <header>
                   <h3>{name}</h3>
-                </a>
-                <p>{description}</p>
-              </header>
-              <footer>
-                <ul class="language-list">
-                  {languages.map(({ name }) => (
-                    <li>
-                      <span>{name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </footer>
-            </article>
+                  <p>{description}</p>
+                </header>
+                <footer>
+                  <ul class="language-list">
+                    {languages.map(({ name }) => (
+                      <li>
+                        <span>{name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </footer>
+              </article>
+            </a>
           </li>
         ))
       }
@@ -34,6 +40,13 @@ import { projects } from "@cv";
 </Section>
 
 <style>
+
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
