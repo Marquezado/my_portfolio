@@ -44,87 +44,77 @@
   "skills": [
     {
       "name": "HTML",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#e34c26"
     },
     {
       "name": "CSS",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#264de4"
     },
     {
       "name": "JavaScript",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#f0db4f"
     },
     {
       "name": "React",
-      "level": "Junior"
-    },
-    {
-      "name": "Node.js",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#61DBFB"
     },
     {
       "name": "Bootstrap",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#7952B3"
+    },
+    {
+      "name": "Node.js",
+      "level": "Junior",
+      "color": "#3C873A"
     },
     {
       "name": "Python",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#306998"
     },
     {
       "name": "Java",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#b07219"
+    },
+    {
+      "name": "Spring Boot 3",
+      "color": "#6DB33F"
     },
     {
       "name": "SQL",
-      "level": "Junior"
+      "level": "Junior",
+      "color": "#00758F"
     },
     {
       "name": "MySQL",
-      "level": "Beginner"
+      "level": "Beginner",
+      "color": "#4479A1"
     },
     {
       "name": "Oracle",
-      "level": "Beginner"
+      "level": "Beginner",
+      "color": "#F80000"
     },
     {
       "name": "Git",
-      "level": "Beginner"
+      "level": "Beginner",
+      "color": "#F1502F"
     },
     {
       "name": "GitHub",
-      "level": "Beginner"
-    },
-    {
-      "name": "Visual Studio Code",
-      "level": "Beginner"
+      "level": "Beginner",
+      "color": "#181717"
     },
     {
       "name": "Postman",
-      "level": "Beginner"
-    },
-    {
-      "name": "SCRUM",
-      "level": "Beginner"
-    },
-    {
-      "name": "Design Thinking",
-      "level": "Beginner"
-    },
-    {
-      "name": "Word",
-      "level": "Beginner"
-    },
-    {
-      "name": "PowerPoint",
-      "level": "Beginner"
-    },
-    {
-      "name": "Excel",
-      "level": "Beginner"
-    },
-    {
-      "name": "Teams",
-      "level": "Beginner"
+      "level": "Beginner",
+      "color": "#FF6C37"
     }
   ],
   "languages": [
@@ -139,12 +129,14 @@
       "url": "https://github.com/Marquezado/node-js-user-auth",
       "isActive": true,
       "description": "Un Autentificador de Usuario con JWT y cookies para sesión",
-      "languages": [
+      "tecnologies": [
         {
-          "name": "Express"
+          "name": "Express",
+          "color": "#000000"
         },
         {
-          "name": "Node.js"
+          "name": "Node.js",
+          "color": "#3C873A"
         }
       ]
     },
@@ -153,9 +145,10 @@
       "url": "https://github.com/Marquezado/react-rest-countries-app",
       "isActive": true,
       "description": "Una API que permite visualizar paises del mundo",
-      "languages": [
+      "tecnologies": [
         {
-          "name": "React"
+          "name": "React",
+          "color": "#61DBFB"
         }
       ]
     },
@@ -164,12 +157,14 @@
       "url": "https://github.com/Marquezado/spring-boot-agenda-contactos",
       "isActive": true,
       "description": "Aplicacion CRUD de Agenda Personal",
-      "languages": [
+      "tecnologies": [
         {
-          "name": "Java"
+          "name": "Java",
+          "color": "#b07219"
         },
         {
-          "name": "Spring Boot 3"
+          "name": "Spring Boot 3",
+          "color": "#6DB33F"
         }
       ]
     }

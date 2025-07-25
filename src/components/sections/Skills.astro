@@ -8,8 +8,8 @@ import { skills } from "@cv"
 <Section title="Skills"> 
 <ul>
     {
-        skills.map(({name}) => (
-            <li>
+        skills.map(({name, color}) => (
+            <li style={`--bg-color: ${color}`}>
                 <span>{name}</span>
             </li>
         ))
@@ -36,12 +36,12 @@ import { skills } from "@cv"
         font-size: 0.8rem;
         font-weight: 500;
         padding: 0.2rem 0.6rem;
-        transition: 0.3s ease, color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     li:hover {
-        background: #000;
-        color: #eee;
+        background-color: color-mix(in srgb, var(--bg-color) 100%, black) ;
+        color: white;
         cursor: pointer;
     }
 

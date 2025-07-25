@@ -7,7 +7,7 @@ import { projects } from "@cv";
   <div class="container">
     <ul class="card-grid">
       {
-        projects.map(({ name, url, description, languages }) => (
+        projects.map(({ name, url, description, tecnologies }) => (
           <li>
             <a
               href={url || "#"}
@@ -22,9 +22,9 @@ import { projects } from "@cv";
                   <p>{description}</p>
                 </header>
                 <footer>
-                  <ul class="language-list">
-                    {languages.map(({ name }) => (
-                      <li>
+                  <ul class="tecnologies-list">
+                    {tecnologies.map(({ name, color }) => (
+                      <li style={`--bg-color: ${color}`}>
                         <span>{name}</span>
                       </li>
                     ))}
@@ -92,7 +92,7 @@ import { projects } from "@cv";
     font-size: 0.95rem;
   }
 
-  .language-list {
+  .tecnologies-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -100,19 +100,19 @@ import { projects } from "@cv";
     padding: 0;
   }
 
-  .language-list li {
+  .tecnologies-list li {
     background: #f3f3f3;
     border-radius: 6px;
     padding: 0.3rem 0.6rem;
     font-size: 0.85rem;
     color: #333;
-    transition:
+    transition: background-color
       0.3s ease,
       color 0.3s ease;
   }
 
-  .language-list li:hover {
-    background: #000;
+  .tecnologies-list li:hover {
+    background-color: color-mix(in srgb, var(--bg-color) 100%, black);
     color: #eee;
     cursor: pointer;
   }
