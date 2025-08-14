@@ -1,15 +1,13 @@
 ---
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
-const { name, label, image, location, profiles, phone, email } = basics;
+const { name, label, image, location, profiles, email } = basics;
 import Mail from "@/icons/email.svg";
-import Phone from "@/icons/phone.svg";
 import LinkedIn from "@/icons/linkedin.svg";
 import Github from "@/icons/github.svg";
 import World from "@/icons/worldColor.svg";
-import { record } from "astro:schema";
 
-const { city, region } = location;
+const { city, country } = location;
 
 const SOCIAL_ICONS: Record<string, any> = {
     Github,
@@ -24,7 +22,7 @@ const SOCIAL_ICONS: Record<string, any> = {
             <h2>{label}</h2>
             <span>  
                 <World/>
-                {city}, {region}
+                {city}, {country}
             </span>
             <footer>
                 {
@@ -36,18 +34,6 @@ const SOCIAL_ICONS: Record<string, any> = {
                             rel="noopener noreferrer"
                         >
                             <Mail />
-                        </a>
-                    )
-                }
-                {
-                    phone && (
-                        <a
-                            href={`tel:${phone}`}
-                            title={`Llama a ${name}, al número ${phone}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Phone />
                         </a>
                     )
                 }
