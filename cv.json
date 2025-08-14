@@ -4,7 +4,6 @@
     "label": "Desarrollador de Software",
     "image": "",
     "email": "marquezadod4vid@gmail.com",
-    "phone": "1412123123",
     "url": "https://johndoe.com",
     "summary": "Estudiante de Desarrollo de software del Instituto IDAT, en busca de practicas Pre-Profesionales, con un gran interes por aplicar lo aprendido en un entorno profesional. Destaco por adaptarse a nuevos retos y mantener una actitud de aprendizaje constante. ",
     "location": {
@@ -38,6 +37,52 @@
       "score": "4.0",
       "courses": [
         ""
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Autentificador de Usuarios",
+      "url": "https://github.com/Marquezado/node-js-user-auth",
+      "isActive": true,
+      "description": "Un Autentificador de Usuario con JWT y cookies para sesión",
+      "tecnologies": [
+        {
+          "name": "Express",
+          "color": "#000000"
+        },
+        {
+          "name": "Node.js",
+          "color": "#3C873A"
+        }
+      ]
+    },
+    {
+      "name": "API Rest Countries",
+      "url": "https://marquezado.github.io/react-rest-countries-app/",
+      "isActive": true,
+      "description": "Una API que permite visualizar paises del mundo",
+      "tecnologies": [
+        {
+          "name": "React",
+          "color": "#61DBFB"
+        }
+      ]
+    },
+    {
+      "name": "Agenda de Contactos",
+      "url": "https://github.com/Marquezado/spring-boot-agenda-contactos",
+      "isActive": true,
+      "description": "Aplicacion CRUD de Agenda Personal",
+      "tecnologies": [
+        {
+          "name": "Java",
+          "color": "#b07219"
+        },
+        {
+          "name": "Spring Boot 3",
+          "color": "#6DB33F"
+        }
       ]
     }
   ],
@@ -121,52 +166,6 @@
     {
       "language": "English",
       "fluency": "B2"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Autentificador de Usuarios",
-      "url": "https://github.com/Marquezado/node-js-user-auth",
-      "isActive": true,
-      "description": "Un Autentificador de Usuario con JWT y cookies para sesión",
-      "tecnologies": [
-        {
-          "name": "Express",
-          "color": "#000000"
-        },
-        {
-          "name": "Node.js",
-          "color": "#3C873A"
-        }
-      ]
-    },
-    {
-      "name": "API Rest Countries",
-      "url": "https://github.com/Marquezado/react-rest-countries-app",
-      "isActive": true,
-      "description": "Una API que permite visualizar paises del mundo",
-      "tecnologies": [
-        {
-          "name": "React",
-          "color": "#61DBFB"
-        }
-      ]
-    },
-    {
-      "name": "Agenda de Contactos",
-      "url": "https://github.com/Marquezado/spring-boot-agenda-contactos",
-      "isActive": true,
-      "description": "Aplicacion CRUD de Agenda Personal",
-      "tecnologies": [
-        {
-          "name": "Java",
-          "color": "#b07219"
-        },
-        {
-          "name": "Spring Boot 3",
-          "color": "#6DB33F"
-        }
-      ]
     }
   ]
 }
