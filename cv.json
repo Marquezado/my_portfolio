@@ -116,6 +116,18 @@
           "color": "#A97BFF"
         }
       ]
+    },
+    {
+      "name": "API Cat Facts",
+      "url": "https://github.com/Marquezado/CatFactsAPI",
+      "isActive": true,
+      "description": "Obten datos curiosos sobre gatos",
+      "tecnologies": [
+        {
+          "name": "Java",
+          "color": "#b07219"
+        }
+      ]
     }
   ],
   "skills": [
