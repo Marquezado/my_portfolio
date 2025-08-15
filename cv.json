@@ -84,6 +84,18 @@
           "color": "#6DB33F"
         }
       ]
+    },
+    {
+      "name": "PokeAPI Mobile App",
+      "url": "https://github.com/Marquezado/PokeApiMobileApp",
+      "isActive": true,
+      "description": "API para consultar informacion de tu pokemon favorito",
+      "tecnologies": [
+        {
+          "name": "Kotlin",
+          "color": "#A97BFF"
+        }
+      ]
     }
   ],
   "skills": [
@@ -111,6 +123,10 @@
       "name": "Bootstrap",
       "level": "Junior",
       "color": "#7952B3"
+    },{
+      "name": "Kotlin",
+      "level": "Junior",
+      "color": "#A97BFF"
     },
     {
       "name": "Node.js",
