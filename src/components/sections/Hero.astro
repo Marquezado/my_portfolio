@@ -1,63 +1,26 @@
 ---
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
-const { name, label, image, location, profiles, email } = basics;
-import Mail from "@/icons/email.svg";
-import LinkedIn from "@/icons/linkedin.svg";
-import Github from "@/icons/github.svg";
-import World from "@/icons/worldColor.svg";
+const { name, location } = basics;
 
 const { city, country } = location;
-
-const SOCIAL_ICONS: Record<string, any> = {
-    Github,
-    LinkedIn,
-}
 ---
 
 <Section>
     <div class="container">
         <div class="info">
             <h1>{name}</h1>
-            <h2>{label}</h2>
-            <span>  
-                <World/>
+            <span>
                 {city}, {country}
             </span>
-            <footer>
-                {
-                    email && (
-                        <a
-                            href={`mailto:${email}`}
-                            title={`Envia un correo a ${name}, al correo ${email}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <Mail />
-                        </a>
-                    )
-                }
-                {
-                    profiles.map(({ network, url, username }) => {
-                        const Icon = SOCIAL_ICONS[network];
-
-                        return (
-                            <a
-                                href={url}
-                                title={`Visitar el perfil de ${name} en ${network}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Icon />
-                            </a>
-                        );
-                    })
-                }
-            </footer>
+            
         </div>
-        <figure>
-            <img src={image} alt={name} />
-        </figure>
+        <nav>
+            <a href="#">Projectos</a>
+            <a href="#">Sobre mi</a>
+            <a href="#">Contactos</a>
+
+        </nav>
     </div>
 </Section>
 
@@ -68,19 +31,15 @@ const SOCIAL_ICONS: Record<string, any> = {
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-    }
-
-    .info {
-        display: flex;
-        flex-direction: column;
+        padding-top: 10px;
     }
 
     h1 {
-        margin-top: 50px;
-        font-family: "Segoe UI", sans-serif;
+        margin-top: 1rem;
         font-weight: 100;
-        color: #6c6c6c;
-        font-size: 2rem;
+        color: #d4dce2;
+        font-size: 16px;
+        margin-bottom: 0;
     }
 
     h2 {
@@ -90,43 +49,25 @@ const SOCIAL_ICONS: Record<string, any> = {
         text-wrap: balance;
     }
 
-    img{
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        width: 128px;
-        border-radius: 6px;
-    }
-
-    footer {
-        display: flex;
-        gap: 10px;
-        margin-top: 1rem;
-    }
-
-    footer a {
-        color: #777;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #eee;
-        padding: 4px;
-        height: 32px;
-        width: 32px;
-        border-radius: 6px;
-        transition: all .3s ease;
-    }
-
-    footer a:hover {
-        background: #eee;
-    }
-
-    svg {
-		width: 20px;
-		height: 20px;
-	}
-
     span {
         color: #666;
+        font-size: 14px;
     }
 
+    nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav a {
+        color: #d4dce2;
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+        opacity: 1;
+    }
 </style>

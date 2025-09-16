@@ -6,25 +6,47 @@ import Education from "@/components/sections/Education.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Projects from "@/components/sections/Projects.astro";
-import KeyBoardManager from "@/components/KeyBoardManager.astro";
+import Presentation from "@/components/sections/Presentation.astro";
 ---
 
 <Layout>
-	<main >
-		<Hero />
-		<About />
-		<Projects />
-		<Education />
-		<Skills />
+	<main>
+		<div class="container">
+			<Hero />
+			<Presentation/>
+			<About />
+			<Projects />
+			<Education />
+			<Skills />
+		</div>
 	</main>
-	<KeyBoardManager />
 </Layout>
 
 <style>
 	main {
 		margin: auto;
 		width: 100%;
+		background: radial-gradient(
+				circle at 30% 30%,
+				rgba(255, 255, 255, 0.1),
+				transparent 40%
+			),
+			radial-gradient(
+				circle at 70% 70%,
+				rgba(255, 255, 255, 0.1),
+				transparent 60%
+			),
+			#0f1114;
+		color: #d8eaff;
+		font-family: "Poppins", sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	
+	.container {
+		max-width: 1250px;
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
 </style>
