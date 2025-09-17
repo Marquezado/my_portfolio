@@ -3,7 +3,7 @@ import Section from "../Section.astro";
 import { projects } from "@cv";
 ---
 
-<Section title="Projectos">
+<Section id="proyectos" title="Proyectos">
   <div class="container">
     <ul class="card-grid">
       {
@@ -45,10 +45,12 @@ import { projects } from "@cv";
     text-decoration: none;
     color: inherit;
     display: block;
+    margin-top: 0;
   }
 
   .container {
     max-width: 1200px;
+    height: 750px;
     margin: 0 auto;
     padding: 1rem 1rem;
   }
@@ -61,13 +63,14 @@ import { projects } from "@cv";
 
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
   }
 
   .card {
-    background: white;
+    background: #0f111453;
     border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
     transition:
@@ -75,20 +78,15 @@ import { projects } from "@cv";
       box-shadow 0.2s ease;
   }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-
   .card h3 {
     margin: 0 0 0.5rem;
     font-size: 1.2rem;
-    color: #222;
+    color: #eee;
   }
 
   .card p {
     margin: 0 0 1rem;
-    color: #555;
+    color: #eee;
     font-size: 0.95rem;
   }
 
@@ -127,6 +125,6 @@ import { projects } from "@cv";
   }
 
   article {
-    height: 6rem;
+    height: 10rem;
   }
 </style>

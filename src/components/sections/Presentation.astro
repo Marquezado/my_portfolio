@@ -1,7 +1,6 @@
 ---
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
-import { record } from "astro:schema";
 
 const { image, name, profiles } = basics;
 ---
@@ -41,6 +40,7 @@ const { image, name, profiles } = basics;
             </div>
         </div>
     </div>
+    <hr>
 </Section>
 
 <style>
@@ -126,5 +126,12 @@ const { image, name, profiles } = basics;
         font-size: 1.5rem;
         font-family: "Poppins", sans-serif;
         font-weight: 100;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #d8eaff, transparent);
+        margin: 0;
     }
 </style>
