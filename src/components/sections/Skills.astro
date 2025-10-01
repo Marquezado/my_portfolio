@@ -1,48 +1,85 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
 
-import { skills } from "@cv"
+import { skills } from "@cv";
 ---
 
-
-<Section title="Habilidades"> 
-<ul>
-    {
-        skills.map(({name, color}) => (
-            <li style={`--bg-color: ${color}`}>
-                <span>{name}</span>
-            </li>
-        ))
-    }
-</ul>
-
+<Section title="Habilidades">
+    <div>
+        <ul id="skills-list">
+            {
+                skills.map(({ name, color }, index) => (
+                    <li
+                        style={`--bg-color: ${color}`}
+                        class={index === 0 ? "active" : ""}
+                    >
+                        <span>{name}</span>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
 </Section>
 
 <style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     ul {
         list-style-type: none;
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
         gap: 10px;
         flex-wrap: wrap;
         padding: 0px;
-        justify-content: center;
         padding-bottom: 3rem;
     }
 
     li {
-        border-radius: 6px;
-        background: #eee;
+        display: flex;
+        border-radius: 25px;
+        background: #f3f3f36f;
         color: black;
         font-size: 0.8rem;
-        font-weight: 500;
+        font-weight: 400;
         padding: 0.2rem 0.6rem;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition:
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out,
+            transform 0.3s ease-in-out,
+            box-shadow 0.3s ease-in-out;
+        height: 50px;
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        cursor: default;
     }
 
     li:hover {
-        background-color: color-mix(in srgb, var(--bg-color) 100%, black) ;
+        background-color: color-mix(in srgb, var(--bg-color) 100%, black);
         color: white;
     }
 
+    li.active {
+        background-color: var(--bg-color);
+        color: white;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px var(--bg-color);
+    }
 </style>
+
+<script type="module">
+    const skills = document.querySelectorAll("#skills-list li");
+    let current = 0;
+
+    setInterval(() => {
+        skills[current].classList.remove("active");
+
+        current = (current + 1) % skills.length;
+
+        skills[current].classList.add("active");
+    }, 250);
+</script>
