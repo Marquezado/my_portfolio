@@ -40,7 +40,6 @@ import { projects } from "@cv";
 </Section>
 
 <style>
-
   .card-link {
     text-decoration: none;
     color: inherit;
@@ -78,10 +77,23 @@ import { projects } from "@cv";
       box-shadow 0.2s ease;
   }
 
+  @keyframes moveGradient {
+    0% {
+      background-color: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
   .card h3 {
     margin: 0 0 0.5rem;
     font-size: 1.2rem;
-    color: #eee;
+    background: linear-gradient(to right, #ff6ec4, #73dbf5, #4adb7f);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    animation: moveGradient 1.2s ease-in-out infinite alternate;
   }
 
   .card p {
@@ -104,8 +116,8 @@ import { projects } from "@cv";
     padding: 0.3rem 0.6rem;
     font-size: 0.85rem;
     color: #eee;
-    transition: background-color
-      0.3s ease,
+    transition:
+      background-color 0.3s ease,
       color 0.3s ease;
   }
 

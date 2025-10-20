@@ -2,50 +2,64 @@
 // import Welcome from "@/components/Welcome.astro";
 import Layout from "@/layouts/Layout.astro";
 import About from "@/components/sections/About.astro";
-import Education from "@/components/sections/Education.astro";
-import Hero from "@/components/sections/Hero.astro";
+import Header from "@/components/sections/Header.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Presentation from "@/components/sections/Presentation.astro";
 ---
 
 <Layout>
-	<main>
-		<div class="container">
-			<Hero />
-			<Presentation/>
-			<Projects />
-			<About />
-			<Skills />
-		</div>
-	</main>
+  <main>
+    <div class="container">
+      <header class="sticky-header">
+        <Header />
+      </header>
+      <Presentation />
+      <Projects />
+      <About />
+      <Skills />
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		width: 100%;
-		background: radial-gradient(
-				circle at 30% 30%,
-				rgba(255, 255, 255, 0.1),
-				transparent 40%
-			),
-			radial-gradient(
-				circle at 70% 70%,
-				rgba(255, 255, 255, 0.1),
-				transparent 60%
-			),
-			#0f1114;
-		color: #d8eaff;
-		font-family: "Poppins", sans-serif;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  main {
+    margin: auto;
+    width: 100%;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.1),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 70% 70%,
+        rgba(255, 255, 255, 0.1),
+        transparent 60%
+      ),
+      #0f1114;
+    color: #d8eaff;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.container {
-		max-width: 1250px;
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
-	}
+  .container {
+    max-width: 1250px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  .sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(15, 17, 20, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  max-width: 1250px;
+}
+
 </style>

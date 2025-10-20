@@ -26,20 +26,6 @@
       }
     ]
   },
-  "education": [
-    {
-      "institution": "IDAT",
-      "url": "https://www.idat.edu.pe/",
-      "area": "Computación e Informatica",
-      "studyType": "Grado Bachiller técnico en Desarrollo de Sistemas de Información",
-      "startDate": "2024-01-15",
-      "endDate": null,
-      "score": "4.0",
-      "courses": [
-        ""
-      ]
-    }
-  ],
   "projects": [
     {
       "name": "Autentificador de Usuarios",

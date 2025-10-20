@@ -69,17 +69,28 @@ const { image, name, profiles } = basics;
         object-fit: cover;
     }
 
+    @keyframes moveGradient {
+        0% {
+            background-color: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
     h1 {
         font-family: "Poppins", sans-serif;
         font-size: 4.6rem;
         width: 800px;
         font-weight: 300;
-        background: linear-gradient(to right, #f2a1d6, #ccc, #a18fff);
+        background: linear-gradient(to right, #ff6ec4, #7873f5, #07ff62);
+        background-size: 200% auto;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
         margin: 0;
+        animation: moveGradient 1.2s ease-in-out infinite alternate;
     }
 
     .profiles {
@@ -111,7 +122,7 @@ const { image, name, profiles } = basics;
     .section_profiles_description {
         display: flex;
         width: 100%;
-        height: 300px;
+        height: 270px;
     }
 
     .description {
