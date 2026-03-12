@@ -1,25 +1,14 @@
 ---
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
-const { name, location } = basics;
 
-const { city, country } = location;
 ---
 
 <Section>
     <div class="container">
-        <div class="info">
-            <h1>{name}</h1>
-            <span>
-                {city}, {country}
-            </span>
-            
-        </div>
         <nav>
             <a href="#proyectos">Proyectos</a>
             <a href="#sobremi">Sobre mi</a>
-            <a href="#contactos">Contactos</a>
-
         </nav>
     </div>
 </Section>
@@ -27,46 +16,28 @@ const { city, country } = location;
 <style>
     .container {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    h1 {
-        margin-top: 1rem;
-        font-weight: 100;
-        color: #d4dce2;
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    h2 {
-        color: #444;
-        font-weight: 500;
-        font-size: 1.1rem;
-        text-wrap: balance;
-    }
-
-    span {
-        color: #666;
-        font-size: 14px;
+        justify-content: flex-end;
+        margin: 25px 30px;
     }
 
     nav {
         display: flex;
-        gap: 2rem;
+        gap: 25px;
+        padding: 12px 16px;
+        border-radius: 100px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #868686;
+        background-color: #191c21;
     }
 
-    nav a {
-        color: #d4dce2;
+    a {
         text-decoration: none;
-        font-size: 0.9rem;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
+        font-size: 16px;
+        color: #E5E5E5;
     }
 
-    nav a:hover {
-        opacity: 1;
+    a:hover {
+        color: #979797;
     }
 </style>

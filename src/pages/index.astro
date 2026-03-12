@@ -11,9 +11,7 @@ import Presentation from "@/components/sections/Presentation.astro";
 <Layout>
   <main>
     <div class="container">
-      <header class="sticky-header">
-        <Header />
-      </header>
+      <Header />
       <Presentation />
       <Projects />
       <About />
@@ -26,7 +24,8 @@ import Presentation from "@/components/sections/Presentation.astro";
   main {
     margin: auto;
     width: 100%;
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at 30% 30%,
         rgba(255, 255, 255, 0.1),
         transparent 40%
@@ -49,17 +48,5 @@ import Presentation from "@/components/sections/Presentation.astro";
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
   }
-
-  .sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: rgba(15, 17, 20, 0.85);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1rem 2rem;
-  max-width: 1250px;
-}
 
 </style>
