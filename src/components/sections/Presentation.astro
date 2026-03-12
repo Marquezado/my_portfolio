@@ -6,8 +6,30 @@ const { name, profiles } = basics;
 ---
 
 <Section>
-  <div id="inicio" class="container">
-    <h1>Hola soy David, desarrollador de software</h1>
+  <div class="container">
+    <div class="eslogan">
+      <div class="container_eslogan">
+        <h1>Hola soy David, desarrollador de software</h1>
+        <div class="lenguajes_collagues">
+          <img
+            class="big"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+          />
+          <img
+            class="medium"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+          />
+          <img
+            class="small-node"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+          />
+          <img
+            class="small-springboot"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+          />
+        </div>
+      </div>
+    </div>
     <div class="section_profiles_description">
       <div class="profiles">
         {
@@ -39,7 +61,11 @@ const { name, profiles } = basics;
 <style>
   .container {
     height: 750px;
-    padding-top: 50px;
+  }
+
+  .container_eslogan {
+    display: flex;
+    align-items: center;
   }
 
   .section_user {
@@ -59,7 +85,6 @@ const { name, profiles } = basics;
     display: flex;
     gap: 2rem;
     flex: 1;
-    align-items: flex-end;
     width: 40%;
   }
 
@@ -85,15 +110,15 @@ const { name, profiles } = basics;
 
   .section_profiles_description {
     display: flex;
+    align-items: end;
     width: 100%;
-    height: 270px;
+    height: 230px;
   }
 
   .description {
     display: flex;
     text-align: right;
     flex-direction: column;
-    justify-content: flex-end;
     width: 60%;
   }
   p {
@@ -101,5 +126,44 @@ const { name, profiles } = basics;
     font-size: 1.5rem;
     font-family: "Arimo", sans-serif;
     color: #e5e5e5;
+  }
+
+  .eslogan {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  .lenguajes_collagues {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 120px;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .lenguajes_collagues img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  .big {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+
+  .medium {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .small-node {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .small-springboot {
+    grid-column: span 1;
+    grid-row: span 1;
   }
 </style>
