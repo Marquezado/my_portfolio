@@ -5,50 +5,55 @@ const { summary } = basics;
 ---
 
 <Section id="sobremi" title="Sobre mí">
-    <div class="content_aboutme">
-        <div class="title_aboutme">
-            <h1>Practica, esfuerzo y actitud, pueden ayudarte con un bug.</h1>
-        </div>
-        <div class="summary">
-            <p>
-                {summary}
-            </p>
-        </div>
+  <div class="content_aboutme">
+    <div class="title_aboutme">
+      <h1>Practica, esfuerzo y actitud, pueden ayudarte con un bug.</h1>
     </div>
+    <div class="summary">
+      <p>
+        {summary}
+      </p>
+    </div>
+  </div>
 </Section>
 
 <style>
+  .content_aboutme {
+    display: flex;
+    justify-content: space-between;
+    height: 750px;
+    width: 100%;
+  }
 
-    .content_aboutme {
-        height: 750px;
-    }
+  div {
+    display: flex;
+  }
 
-    div{
-        display: flex;
-    }
+  .title_aboutme {
+    align-items: flex-start;
+    width: 350px;
+  }
 
-    .title_aboutme {
-        align-items: flex-start;
-    }
+  .summary {
+    font-family: "Arimo", sans-serif;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+    width: 900px;
+  }
 
-    .summary {
-        justify-content: flex-end;
-        align-items: flex-end;
-        width: 80%;
-    }
+  h1 {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #e5e5e5;
+    width: 300px;
+  }
 
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-size: 2.5rem;
-        width: 60%;
-    }
-
-    p {
-        color: #eee;
-        font-size: 1.5rem;
-        font-weight: 100;
-        margin: 0;
-        text-wrap: pretty;
-    }
+  p {
+    color: #e5e5e5;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-wrap: pretty;
+  }
 </style>
