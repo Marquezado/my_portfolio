@@ -2,13 +2,8 @@
   "basics": {
     "name": "David D. Marquezado",
     "label": "Desarrollador de Software",
-    "image": "",
-    "email": "marquezadod4vid@gmail.com",
-    "url": "https://johndoe.com",
     "summary": "Soy estudiante de Desarrollo de Software y estoy buscando una oportunidad para realizar mis prácticas preprofesionales. Me interesa mucho seguir aprendiendo y poner en práctica lo que ya sé en un entorno real. Me considero una persona que se adapta rápido, le gusta asumir nuevos retos y siempre está con ganas de seguir mejorando. ",
     "location": {
-      "address": "",
-      "postalCode": "",
       "city": "Lima",
       "countryCode": "PER",
       "country": "Perú"
@@ -16,7 +11,7 @@
     "profiles": [
       {
         "network": "Github",
-        "username": "MarquezadoD",
+        "username": "Marquezado",
         "url": "https://github.com/Marquezado"
       },
       {
@@ -30,7 +25,6 @@
     {
       "name": "Autentificador de Usuarios",
       "url": "https://github.com/Marquezado/node-js-user-auth",
-      "isActive": true,
       "description": "Un Autentificador de Usuario con JWT y cookies para sesión",
       "tecnologies": [
         {
@@ -50,7 +44,6 @@
     {
       "name": "API Rest Countries",
       "url": "https://marquezado.github.io/react-rest-countries-app/",
-      "isActive": true,
       "description": "Una API que permite visualizar paises del mundo",
       "tecnologies": [
         {
@@ -74,7 +67,6 @@
     {
       "name": "Agenda de Contactos",
       "url": "https://github.com/Marquezado/spring-boot-agenda-contactos",
-      "isActive": true,
       "description": "Aplicacion CRUD de Agenda Personal",
       "tecnologies": [
         {
@@ -94,7 +86,6 @@
     {
       "name": "PokeAPI Mobile App",
       "url": "https://github.com/Marquezado/PokeApiMobileApp",
-      "isActive": true,
       "description": "API para consultar informacion de tu pokemon favorito",
       "tecnologies": [
         {
@@ -106,7 +97,6 @@
     {
       "name": "API Cat Facts",
       "url": "https://github.com/Marquezado/CatFactsAPI",
-      "isActive": true,
       "description": "Obten datos curiosos sobre gatos",
       "tecnologies": [
         {
@@ -196,11 +186,6 @@
       "level": "Beginner",
       "color": "#FF6C37"
     }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "B2"
-    }
   ]
+
 }

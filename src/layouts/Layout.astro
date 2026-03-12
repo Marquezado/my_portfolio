@@ -1,62 +1,43 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portafolio Personal</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100;1,200&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portafolio Personal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 
-	<style>
-		html {
-			font-family: "Poppins", sans-serif;
-			font-weight: 100;
-			background: #fff;
-			letter-spacing: -0.025rem;
-			scroll-behavior: smooth;
-			
-		}
+  <style>
+    body,
+    figure {
+      margin: 0;
+      padding: 0;
+    }
 
-		body,
-		figure {
-			margin: 0;
-			padding: 0;
-		}
+    a {
+      text-decoration: none;
+    }
 
-		a {
-			text-decoration: none;
-		}
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-		ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-		}
-
-		p {
-			color: #777;
-			font-size: 0.85rem;
-			line-height: 1.5;
-			margin: 0;
-			text-wrap: pretty;
-		}
-
-		
-	</style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  </style>
 </html>

@@ -2,142 +2,107 @@
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
 
-const { image, name, profiles } = basics;
+const { name, profiles } = basics;
 ---
 
 <Section>
-    <div class="container">
-        <div class="section_user">
-            <figure>
-                <img src={image} />
-            </figure>
-            <h3>Hola, soy {name}</h3>
-        </div>
-
-        <h1>"console.log('Hola Mundo'); - Aqui vamos."</h1>
-
-        <div class="section_profiles_description">
-            <div class="profiles">
-                {
-                    profiles.map(({ network, url }) => {
-                        return (
-                            <a
-                                href={url}
-                                title={`Visitar ${network}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {network}
-                            </a>
-                        );
-                    })
-                }
-            </div>
-            <div class="description">
-                <p>Sin experiencia laboral aún, pero con una gran motivacion
-                    por aprender, crecer en el área y aportar soluciones
-                    efectivas.</p>
-            </div>
-        </div>
+  <div id="inicio" class="container">
+    <h1>Hola soy David, desarrollador de software</h1>
+    <div class="section_profiles_description">
+      <div class="profiles">
+        {
+          profiles.map(({ network, url }) => {
+            return (
+              <a
+                href={url}
+                title={`Visitar ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {network}
+              </a>
+            );
+          })
+        }
+      </div>
+      <div class="description">
+        <p>
+          Desarrollador de software recien egresado con conocimientos de
+          desarrollo web y programación. Cuento con experiencia en proyectos
+          academicos, con intereses de aprender nuevos conocimientos, trabajando
+          en equipo y compartiendo experiencia para desarrollar soluciones
+          eficientes. Busco mis primeras oportunidades para crecer y aportar
+          valor a un equipo de desarrollo.
+        </p>
+      </div>
     </div>
-    
+  </div>
 </Section>
 
 <style>
-    .container {
-        height: 750px;
-        padding-top: 50px;
-    }
+  .container {
+    height: 750px;
+    padding-top: 50px;
+  }
 
-    .section_user {
-        display: flex;
-        
-    }
+  .section_user {
+    display: flex;
+  }
 
-    h3 {
-        font-size: 14px;
-        align-items: center;
-        font-weight: 100;
-        color: #666;
-    }
+  h1 {
+    display: flex;
+    font-family: "Noto Serif JP", sans-serif;
+    font-weight: 500;
+    font-size: 70px;
+    width: 70%;
+    color: #e5e5e5;
+  }
 
-    figure {
-        height: 25px;
-        width: 25px;
-        margin: 0;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+  .profiles {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    align-items: flex-end;
+    width: 40%;
+  }
 
-    @keyframes moveGradient {
-        0% {
-            background-color: 0% 50%;
-        }
-        100% {
-            background-position: 100% 50%;
-        }
-    }
+  .profiles a {
+    font-family: "Arimo", sans-serif;
+    color: #777;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
 
-    h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 4.6rem;
-        width: 800px;
-        font-weight: 300;
-        background: linear-gradient(to right, #ff6ec4, #7873f5, #07ff62);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        margin: 0;
-        animation: moveGradient 1.2s ease-in-out infinite alternate;
-    }
+  .profiles a:hover {
+    background: #15181c;
+    color: aliceblue;
+  }
 
-    .profiles {
-        display: flex;
-        gap: 2rem;
-        flex: 1;
-        align-items: flex-end;
-    }
+  .section_profiles_description {
+    display: flex;
+    width: 100%;
+    height: 270px;
+  }
 
-    .profiles a {
-        color: #777;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.05);
-        padding: 4px;
-        height: 30px;
-        width: 80px;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-    }
-
-    .profiles a:hover {
-        background: #15181c;
-        color: aliceblue;
-    }
-
-    .section_profiles_description {
-        display: flex;
-        width: 100%;
-        height: 270px;
-    }
-
-    .description {
-        display: flex;
-        text-align: right;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 40%;
-    }
-    p {
-        margin: 0;
-        font-size: 1.5rem;
-        font-family: "Poppins", sans-serif;
-        font-weight: 100;
-    }
-
-    
+  .description {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 60%;
+  }
+  p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: "Arimo", sans-serif;
+    color: #e5e5e5;
+  }
 </style>
