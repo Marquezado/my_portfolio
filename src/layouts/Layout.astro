@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Portafolio Personal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +17,34 @@
   </body>
 
   <style>
-    body,
+    :root {
+      --bg-color: #ffffff;
+      --bg-color-blur: #96969653;
+      --bg-a-color: #f0f0f0;
+      --bg-target-color: #f9f9f9;
+      --border-color: #cfcfcf;
+      --txt-color: #000000;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #0f1114;
+      --bg-color-blur: #44444499;
+      --bg-a-color: #1e1e1e;
+      --bg-target-color: #181818b4;
+      --border-color: #2c2c2c;
+      --txt-color: #e5e5e5;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 30% 30%, var(--bg-color-blur), transparent 40%),
+        radial-gradient(circle at 70% 70%, var(--bg-color-blur), transparent 60%),
+        var(--bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     figure {
       margin: 0;
       padding: 0;

@@ -68,24 +68,25 @@ import { projects } from "@cv";
   }
 
   .card {
-    background: #0f111453;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 1.5rem;
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
+    border-radius: 10px;
+  }
+
+  .card:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.516);
   }
 
   .card h3 {
-    color: #e5e5e5;
+    color: var(--txt-color);
     font-family: "Arimo", sans-serif;
   }
 
   .card p {
     font-family: "Arimo", sans-serif;
-    color: #eee;
+    color: var(--txt-color);
     font-size: 0.95rem;
   }
 
@@ -99,11 +100,13 @@ import { projects } from "@cv";
   }
 
   .tecnologies-list li {
-    background: #f3f3f36f;
+    background: var(--bg-target-color);
+    border: 1px solid var(--txt--color);
     font-family: "Arimo", sans-serif;
     border-radius: 6px;
+    border: 1px solid var(--border-color);
     padding: 0.3rem 0.6rem;
-    color: #eee;
+    color: var(--txt-color);
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
@@ -115,11 +118,14 @@ import { projects } from "@cv";
 
   .tecnologies-list li:hover {
     background-color: color-mix(in srgb, var(--bg-color) 100%, black);
-    color: #eee;
+    color: var(--txt-color);
   }
 
   a {
     text-decoration: none;
+    background: var(--bg-target-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
   }
 
   article {

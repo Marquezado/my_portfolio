@@ -49,9 +49,9 @@ const { name, profiles } = basics;
       </div>
       <div class="description">
         <p>
-          Desarrollador de software con conocimientos fundamentales y gran
+          Conocimientos fundamentales y gran
           interés en el desarrollo de aplicaciones y soluciones tecnológicas,
-          con capacidad de trabajar en equipo.
+          junto a un equipo.
         </p>
       </div>
     </div>
@@ -78,7 +78,7 @@ const { name, profiles } = basics;
     font-weight: 500;
     font-size: 70px;
     width: 70%;
-    color: #e5e5e5;
+    color: var(--txt-color);
   }
 
   .profiles {
@@ -94,18 +94,19 @@ const { name, profiles } = basics;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-a-color);
     padding: 4px;
     height: 30px;
     width: 80px;
     border-radius: 20px;
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     text-decoration: none;
   }
 
   .profiles a:hover {
-    background: #15181c;
-    color: aliceblue;
+    background: var(--bg-a-color);
+    color: var(--txt-color);
   }
 
   .section_profiles_description {
@@ -125,7 +126,7 @@ const { name, profiles } = basics;
     margin: 0;
     font-size: 1.5rem;
     font-family: "Arimo", sans-serif;
-    color: #e5e5e5;
+    color: var(--txt-color);
   }
 
   .eslogan {
