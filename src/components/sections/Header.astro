@@ -13,10 +13,6 @@ import circle from "@/icons/circle.svg?url";
     <div class="dark_mode">
       <a
         id="toggleTheme"
-        onclick="const root = document.documentElement;
-        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        root.dataset.theme = next;
-        localStorage.setItem('theme', next);"
         ><img src={circle} alt="toggleTheme" /></a
       >
     </div>

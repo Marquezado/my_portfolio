@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,13 +17,16 @@
   </body>
 
   <style>
-    :root {
+    [data-theme="light"] {
       --bg-color: #ffffff;
       --bg-color-blur: #96969653;
       --bg-a-color: #f0f0f0;
       --bg-target-color: #f9f9f9;
+      --bg-skill-color: #f9f9f94c;
+      --bg-skill-color-alt: #9d9c9c7a;
       --border-color: #cfcfcf;
       --txt-color: #000000;
+      --shadow-color: #444444;
     }
 
     [data-theme="dark"] {
@@ -31,8 +34,11 @@
       --bg-color-blur: #44444499;
       --bg-a-color: #1e1e1e;
       --bg-target-color: #181818b4;
+      --bg-skill-color: #18181850;
+      --txt-skill-color-alt: #acacac7d;
       --border-color: #2c2c2c;
       --txt-color: #e5e5e5;
+      --shadow-color: #969696;
     }
 
     body {
@@ -40,6 +46,7 @@
         radial-gradient(circle at 30% 30%, var(--bg-color-blur), transparent 40%),
         radial-gradient(circle at 70% 70%, var(--bg-color-blur), transparent 60%),
         var(--bg-color);
+        transition: background-color 0.3s, color 0.3s;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -66,4 +73,24 @@
       box-sizing: border-box;
     }
   </style>
+
+  <script>
+
+    const root = document.documentElement
+    const saved = localStorage.getItem("theme")
+
+    if (saved) {
+      root.dataset.theme = saved
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      root.dataset.theme = prefersDark ? 'dark' : 'light'
+    }
+
+    const toggle = document.getElementById("toggleTheme")
+    toggle?.addEventListener("click", () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark'
+      root.dataset.theme = next
+      localStorage.setItem('theme', next)
+    })
+  </script>
 </html>

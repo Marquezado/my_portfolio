@@ -29,7 +29,7 @@
       "tecnologies": [
         {
           "name": "Express",
-          "color": "#000000"
+          "color": "#7a7a7a"
         },
         {
           "name": "JavaScript",
@@ -109,82 +109,85 @@
   "skills": [
     {
       "name": "HTML",
+      "img" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
       "level": "Junior",
       "color": "#e34c26"
     },
     {
       "name": "CSS",
+      "img" :"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       "level": "Junior",
       "color": "#264de4"
     },
     {
       "name": "JavaScript",
+      "img" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       "level": "Junior",
       "color": "#f0db4f"
     },
     {
       "name": "React",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "level": "Junior",
       "color": "#61DBFB"
     },
     {
       "name": "Bootstrap",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
       "level": "Junior",
       "color": "#7952B3"
     },
     {
-      "name": "Kotlin",
-      "level": "Junior",
-      "color": "#A97BFF"
-    },
-    {
       "name": "Node.js",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
       "level": "Junior",
       "color": "#3C873A"
     },
     {
       "name": "Python",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
       "level": "Junior",
       "color": "#306998"
     },
     {
       "name": "Java",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
       "level": "Junior",
       "color": "#b07219"
     },
     {
-      "name": "Spring Boot 3",
+      "name": "Spring Boot",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
       "color": "#6DB33F"
     },
     {
+      "name": "Docker",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+      "color": "#2496ED"
+    },
+    {
       "name": "SQL",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg",
       "level": "Junior",
       "color": "#00758F"
     },
     {
       "name": "MySQL",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
       "level": "Beginner",
       "color": "#4479A1"
     },
     {
-      "name": "Oracle",
-      "level": "Beginner",
-      "color": "#F80000"
-    },
-    {
       "name": "Git",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
       "level": "Beginner",
       "color": "#F1502F"
     },
     {
       "name": "GitHub",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
       "level": "Beginner",
       "color": "#181717"
-    },
-    {
-      "name": "Postman",
-      "level": "Beginner",
-      "color": "#FF6C37"
     }
   ]
 
