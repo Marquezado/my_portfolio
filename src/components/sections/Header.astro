@@ -3,12 +3,14 @@ import Section from "@/components/Section.astro";
 import circle from "@/icons/circle.svg?url";
 ---
 
-<Section>
+<Section id="inicio">
   <div class="container">
-    <div class="nav">
+    <div id="navbar">
+    <div class="sections">
+      <a href="#inicio">Inicio</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#sobremi">Sobre mi</a>
-    </div>
+    
 
     <div class="dark_mode">
       <a
@@ -16,28 +18,43 @@ import circle from "@/icons/circle.svg?url";
         ><img src={circle} alt="toggleTheme" /></a
       >
     </div>
+    </div>
+  </div>
   </div>
 </Section>
 
 <style>
+
   .container {
     display: flex;
-    justify-content: flex-end;
-    margin: 25px;
-    gap: 10px;
+    justify-content: center;
   }
 
-  .nav {
+  #navbar {
+    position: fixed;
+    top: 0;
+    background: var(--bg-color);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 30px 30px;
+    transition: top 1s ease,
+    border-radius 1s ease,
+    box-shadow 1s ease;
+  }
+
+  #navbar.scrolled {
+    border-radius: 30px;
+    transition: border-radius 1s ease,
+    top 1s ease;
+    top: 15px;
+    box-shadow: 0 10px 30px var(--shadow-nav);
+  }
+
+  .sections {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 25px;
-    padding: 12px 18px;
-    border-radius: 100px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--border-color);
-    background-color: var(--bg-a-color);
+    padding: 12px 38px 12px 38px;
   }
 
   a {
@@ -72,7 +89,6 @@ import circle from "@/icons/circle.svg?url";
     width: 70px;
     height: 50px;
     border-radius: 100px;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-a-color);
+    background-color: var(--bg-toggle-color);
   }
 </style>
