@@ -6,45 +6,40 @@ import circle from "@/icons/circle.svg?url";
 <Section id="inicio">
   <div class="container">
     <div id="navbar">
-    <div class="sections">
-      <a href="#inicio">Inicio</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#sobremi">Sobre mi</a>
-    
+      <div class="sections">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobremi">Sobre mi</a>
 
-    <div class="dark_mode">
-      <a
-        id="toggleTheme"
-        ><img src={circle} alt="toggleTheme" /></a
-      >
+        <div class="dark_mode">
+          <a id="toggleTheme"><img src={circle} alt="toggleTheme" /></a>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
   </div>
 </Section>
 
 <style>
-
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-
   #navbar {
     position: fixed;
+    z-index: 1000;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--bg-color);
     backdrop-filter: blur(5px);
     border-radius: 0 0 30px 30px;
-    transition: top 1s ease,
-    border-radius 1s ease,
-    box-shadow 1s ease;
+    transition:
+      top 1s ease,
+      border-radius 1s ease,
+      box-shadow 1s ease;
   }
 
   #navbar.scrolled {
     border-radius: 30px;
-    transition: border-radius 1s ease,
-    top 1s ease;
+    transition:
+      border-radius 1s ease,
+      top 1s ease;
     top: 15px;
     box-shadow: 0 10px 30px var(--shadow-nav);
   }
@@ -54,13 +49,30 @@ import circle from "@/icons/circle.svg?url";
     justify-content: center;
     align-items: center;
     gap: 25px;
-    padding: 12px 38px 12px 38px;
+    padding: 12px 38px;
+  }
+
+  @media (max-width: 600px) {
+    #navbar {
+      width: 75%;
+    }
+
+    .sections {
+      gap: 12px;
+      padding: 10px 20px;
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
   }
 
   a {
     font-family: "Arimo", sans-serif;
     text-decoration: none;
-    font-size: 16px;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);  
     color: var(--txt-color);
     cursor: pointer;
     display: flex;

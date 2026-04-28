@@ -41,17 +41,17 @@ import { projects } from "@cv";
 
 <style>
   .card-link {
+    height: 100%;
     text-decoration: none;
     color: inherit;
     display: block;
-    margin-top: 0;
+    border-radius: 12px;
   }
 
   .container {
     max-width: 1200px;
-    height: 750px;
     margin: 0 auto;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
   }
 
   ul {
@@ -63,53 +63,62 @@ import { projects } from "@cv";
 
   .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 5rem;
   }
 
   .card {
+    height: 100%;
     padding: 1.5rem;
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
-    border-radius: 10px;
+    border-radius: 12px;
+    background: var(--bg-target-color);
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .card:hover{
+    transform: translateY(-4px);
     box-shadow: 0 4px 12px var(--shadow-color);
   }
 
   .card h3 {
     color: var(--txt-color);
     font-family: "Arimo", sans-serif;
+    margin: 0 0 0.5rem 0;
   }
 
   .card p {
     font-family: "Arimo", sans-serif;
     color: var(--txt-color);
     font-size: 0.95rem;
+    margin: 0;
+    opacity: 0.9;
   }
 
   .tecnologies-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0;
+    margin-top: 0;
     padding: 0;
-    cursor: pointer;
   }
 
   .tecnologies-list li {
-    background: var(--bg-target-color);
-    border: 1px solid var(--txt--color);
+    list-style: none;
+    background: color-mix(in srgb, var(--bg-target-color), white 5%);
     font-family: "Arimo", sans-serif;
+    font-size: 0.8rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     padding: 0.3rem 0.6rem;
     color: var(--txt-color);
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+    transition: transform 0.2 ease;
   }
   
   span {
@@ -117,8 +126,17 @@ import { projects } from "@cv";
   }
 
   .tecnologies-list li:hover {
-    background-color: color-mix(in srgb, var(--bg-color) 100%, black);
-    color: var(--txt-color);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 1.2rem;
+    }
   }
 
   a {
@@ -126,9 +144,5 @@ import { projects } from "@cv";
     background: var(--bg-target-color);
     border-radius: 10px;
     border: 1px solid var(--border-color);
-  }
-
-  article {
-    height: 10rem;
   }
 </style>

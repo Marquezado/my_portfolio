@@ -2,35 +2,27 @@
 import Section from "../Section.astro";
 
 import { skills } from "@cv";
+
+const doubleSkills = [...skills, ...skills];
 ---
 
 <Section title="Habilidades">
   <div class="container">
     <div class="carousel">
-    <ul id="skills-list" class="group">
-      {
-        skills.map(({ name, img }) => (
-          <li>
-            <img src={img} alt={name} />
-          </li>
-        ))
-      }
-    </ul>
-    <ul id="skills-list" class="group">
-      {
-        skills.map(({ name, img }) => (
-          <li>
-            <img src={img} alt={name} />
-          </li>
-        ))
-      }
-    </ul>
-  </div>
+      <ul class="group">
+        {
+          doubleSkills.map(({ name, img }) => (
+            <li>
+              <img src={img} alt={name} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </Section>
 
 <style>
-
   .container {
     display: flex;
     justify-content: center;
@@ -38,9 +30,10 @@ import { skills } from "@cv";
   }
 
   li {
-    height: 90px;
-    width: 90px;
-    border-radius: 10px;
+    flex: 0 0 auto;
+    height: 80px;
+    width: 80px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,32 +43,30 @@ import { skills } from "@cv";
     height: 120px;
     width: 100%;
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     z-index: -1;
-    gap: .5em;
     -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
   }
 
   .group {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 4em;
-    animation: spin 15s infinite linear;
-    padding-right: 1em;
+    animation: scroll 18s infinite linear;
+    width: max-content;
   }
 
   .carousel::-webkit-scrollbar {
@@ -83,20 +74,59 @@ import { skills } from "@cv";
   }
 
   img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
   }
 
-  @keyframes spin {
+  @keyframes scroll {
     from {
-      translate: 0;
+      transform: translateX(0);
     }
     to {
-      translate: -100%;
+      transform: translatex(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel {
+      height: 100px;
+    }
+
+    .group {
+      gap: 2.5rem;
+    }
+
+    li {
+      width: 65px;
+      height: 65px;
+    }
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .group {
+      gap: 2rem;
+    }
+
+    li {
+      width: 55px;
+      height: 55px;
+    }
+
+    img {
+      width: 38px;
+      height: 38px;
     }
   }
 
   ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
