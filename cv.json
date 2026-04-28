@@ -42,6 +42,29 @@
       ]
     },
     {
+      "name": "Posts API",
+      "url": "https://github.com/Marquezado/blog_api",
+      "description": "Api REST de posts, con funcionalidades CRUD",
+      "tecnologies": [
+        {
+          "name": "Express",
+          "color": "#7a7a7a"
+        },
+        {
+          "name": "TypeScript",
+          "color": "#3178C6"
+        },
+        {
+          "name": "Node.js",
+          "color": "#3C873A"
+        },
+        {
+          "name": "Prisma",
+          "color": "#0C3448"
+        }
+      ]
+    },
+    {
       "name": "API Rest Countries",
       "url": "https://marquezado.github.io/react-rest-countries-app/",
       "description": "Una API que permite visualizar paises del mundo",
@@ -172,8 +195,26 @@
       "color": "#00758F"
     },
     {
+      "name": "Postgres",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      "level": "Junior",
+      "color": "#00758F"
+    },
+    {
       "name": "MySQL",
       "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      "level": "Beginner",
+      "color": "#4479A1"
+    },
+    {
+      "name": "Hibernate",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hibernate/hibernate-original.svg",
+      "level": "Beginner",
+      "color": "#4479A1"
+    },
+    {
+      "name": "Prisma",
+      "img": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg",
       "level": "Beginner",
       "color": "#4479A1"
     },
