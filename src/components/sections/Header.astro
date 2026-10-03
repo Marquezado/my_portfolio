@@ -1,6 +1,6 @@
 ---
 import Section from "@/components/Section.astro";
-import circle from "@/icons/circle.svg?url";
+import Circle from "@/icons/circle.svg";
 ---
 
 <Section id="inicio">
@@ -12,7 +12,7 @@ import circle from "@/icons/circle.svg?url";
         <a href="#sobremi">Sobre mi</a>
 
         <div class="dark_mode">
-          <a id="toggleTheme"><img src={circle} alt="toggleTheme" /></a>
+          <a id="toggleTheme"><Circle fill="currentColor" class="iconMode"/></a>
         </div>
       </div>
     </div>
@@ -83,13 +83,14 @@ import circle from "@/icons/circle.svg?url";
     opacity: 50%;
   }
 
-  img {
+  .iconMode {
     width: 35px;
     height: 35px;
-    opacity: 70%;
+    opacity: 85%;
+    color: var(--toggle-color);
   }
 
-  img:hover {
+  .iconMode:hover {
     opacity: 50%;
   }
 
@@ -101,6 +102,8 @@ import circle from "@/icons/circle.svg?url";
     width: 70px;
     height: 50px;
     border-radius: 100px;
-    background-color: var(--bg-toggle-color);
   }
+
+
+
 </style>
