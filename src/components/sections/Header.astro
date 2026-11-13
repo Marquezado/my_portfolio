@@ -52,7 +52,7 @@ import Circle from "@/icons/circle.svg";
     padding: 12px 38px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) and (max-width: 1023px) {
     #navbar {
       width: 75%;
     }
@@ -68,6 +68,33 @@ import Circle from "@/icons/circle.svg";
     }
 
   }
+
+  @media (max-width: 767px) {
+    #navbar {
+      width: 90%;
+    }
+    
+    .sections {
+      gap: 15px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
+    a {
+      
+      font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+
+
+  }
+
 
   a {
     font-family: "Arimo", sans-serif;
